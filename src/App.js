@@ -53,7 +53,9 @@ function App() {
             {" "}
             <h3>Weather in {weather.data.name}</h3>
             <p>Temperature: {weather.data.main?.temp}°K</p>
-            <p>Weather: {weather.data.weather[0]?.description}</p>
+            {weather.data.weather && (
+              <p>Weather: {weather.data.weather[0]?.description}</p>
+            )}
             <p>Humidity: {weather.data.main?.humidity}%</p>
             <p>Wind Speed: {weather.data.wind?.speed} m/s</p>
           </p>
